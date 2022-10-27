@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  squid:
+    image: squid-openssl
+    container_name: my-squid
+    restart: always
+    ports:
+      - 3128:3128
+    volumes:
+      -  ./etc-squid:/etc/squid/

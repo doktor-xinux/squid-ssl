@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   squid:
-    image: squid-openssl
+    image: xinux/squid-openssl
     container_name: my-squid
     restart: always
     ports:

@@ -10,8 +10,11 @@ COPY squid-ca.pem /etc/squid/
 COPY squid-ca.crt /etc/squid/
 COPY start.sh /
 RUN  /usr/lib/squid/security_file_certgen -c -s /var/spool/squid/ssl_db -M 4MB
-RUN squid -z  /var/spool/squid 
+RUN squid -z   
 RUN chmod -R 777 /var/spool/squid
 RUN cp -r /etc/squid /tmp
+EXPOSE 3127
 EXPOSE 3128
+EXPOSE 3129
+EXPOSE 3130
 CMD ["/usr/bin/supervisord"]

@@ -5,6 +5,9 @@ services:
     container_name: my-squid
     restart: always
     ports:
+      - 3127:3127
       - 3128:3128
+      - 3129:3129
+      - 3130:3130
     volumes:
       -  ./etc-squid:/etc/squid/
